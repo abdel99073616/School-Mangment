@@ -41,7 +41,7 @@ class Student_C(models.Model):
     image = models.ImageField()
     parent_ID = models.ForeignKey(Parent_C , related_name='student_parent' , on_delete = models.CASCADE )
     Class_ID = models.ForeignKey(Classroom_C , related_name='student_class' , on_delete = models.CASCADE )
-    level_ID = models.ForeignKey(Levels , related_name='student_level_C' , on_delete = models.CASCADE)
+    level_ID_C = models.ForeignKey(Levels , related_name='student_level_C' , on_delete = models.CASCADE)
 
 class Student_Course_C(models.Model):
     student_id = models.ForeignKey(Student_C , related_name='Student_Course' , on_delete = models.CASCADE )
