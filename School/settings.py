@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'B' ,
     'C' ,
     'KG' ,
+    'forall' ,
 ]
 
 MIDDLEWARE = [
