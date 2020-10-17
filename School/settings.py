@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'C' ,
     'KG' ,
     'forall' ,
+    'adminlog' ,
 ]
 
 MIDDLEWARE = [
