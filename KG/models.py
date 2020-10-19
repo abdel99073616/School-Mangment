@@ -42,17 +42,21 @@ class Student_KG(models.Model):
     parent_ID = models.ForeignKey(Parent_KG , related_name='student_parent' , on_delete = models.CASCADE )
     Class_ID = models.ForeignKey(Classroom_KG , related_name='student_class' , on_delete = models.CASCADE )
     level_ID_KG = models.ForeignKey(Levels , related_name='student_level_KG' , on_delete = models.CASCADE)
+    #THis is for testing
 
 class Student_Course_KG(models.Model):
     student_id = models.ForeignKey(Student_KG , related_name='Student_Course' , on_delete = models.CASCADE )
     course_id = models.ForeignKey(Course_KG , related_name='Student_course' , on_delete = models.CASCADE )
+        #THis is for testing
 
 class Sudent_Teacher_KG(models.Model):
     student_id = models.ForeignKey(Student_KG , related_name='Student_Teacher' , on_delete = models.CASCADE )
     teacher_id = models.ForeignKey(Teacher_KG , related_name='student_teacher' , on_delete = models.CASCADE )
+    #THis is for testing
 
 
 class Activites_student_teacher_KG(models.Model):
     student_id = models.ForeignKey(Student_KG , related_name='Student_Teacher_Acivity' , on_delete = models.CASCADE )
     teacher_id = models.ForeignKey(Teacher_KG , related_name='Student_teacher_Acivity' , on_delete = models.CASCADE )
     activity_id = models.ForeignKey(Activites_KG , related_name='student_Teacher_Acivity' , on_delete = models.CASCADE )
+         #THis is for testing
