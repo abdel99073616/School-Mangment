@@ -8,9 +8,12 @@ class Teacher_A(models.Model):
     address = models.CharField(max_length=20)
     Date_of_Bath = models.DateField()
     password = models.CharField(max_length=20,unique=True)
-    image = models.ImageField()
     Email = models.EmailField()
     last_login = models.DateTimeField()
+
+    def __str__(self):
+        return self.Fname 
+    
 
 class Parent_A(models.Model):
     Father_name = models.CharField(max_length=20)
