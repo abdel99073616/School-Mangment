@@ -33,12 +33,12 @@ class TeacherRowForm_A(forms.Form):
 
 class ParentForm_A(forms.ModelForm):
     class Meta:
-        model = Student_A
+        model = Parent_A
         fields =[
             'Father_name' ,
             'Mother_name' ,
             'address' ,
-            'phone' ,
+            'Phone' ,
             'password' ,
             'last_login',
         ]
@@ -70,7 +70,7 @@ class CourseRowForm_A(forms.Form):
 
 class ClassroomForm_A(forms.ModelForm):
     class Meta:
-        model = Student_A
+        model = Classroom_A
         fields =[
             'Student_Level' ,
             'section' ,
@@ -86,7 +86,7 @@ class ClassroomRowForm_A(forms.Form):
 
 class ActivitiesForm_A(forms.ModelForm):
     class Meta:
-        model = Student_A
+        model = Activites_A
         fields =[
             'act_name' ,
             'Date' ,
@@ -115,7 +115,7 @@ class StudentForm_A(forms.ModelForm):
             'password' ,
             'parent_ID' ,
             'Class_ID' ,
-            'level_ID' ,
+            'level_ID_A' ,
         ]
    
 class StudentRowForm_A(forms.Form):
@@ -130,57 +130,3 @@ class StudentRowForm_A(forms.Form):
 
 
 
-#################################################################################
-
-
-# Student_Course Form
-
-class Student_CourseForm_A(forms.ModelForm):
-    class Meta:
-        model = Student_A
-        fields =[
-            'student_id' ,
-            'course_id' ,
-            
-        ]
-   
-class Student_CourseRowForm_A(forms.Form):
-    student_id = forms.ChoiceField()
-    course_id = forms.ChoiceField()
-
-
-#################################################################################
-
-
-# Student_Course Form
-
-class Student_TeacherForm_A(forms.ModelForm):
-    class Meta:
-        model = Student_A
-        fields =[
-            'student_id' ,
-            'teacher_id' ,
-            
-        ]
-   
-class Student_TeacerRowForm_A(forms.Form):
-    student_id = forms.ChoiceField()
-    teacher_id = forms.ChoiceField()
-
-######################################################################
-# Student_Course Form
-
-class Activites_student_teacherForm_A(forms.ModelForm):
-    class Meta:
-        model = Student_A
-        fields =[
-            'student_id' ,
-            'teacher_id' ,
-            'activity_id'
-            
-        ]
-   
-class Activites_student_teacherRowForm_A(forms.Form):
-    student_id = forms.ChoiceField()
-    teacher_id = forms.ChoiceField()
-    activity_id = forms.ChoiceField()
